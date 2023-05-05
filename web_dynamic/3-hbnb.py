@@ -12,14 +12,14 @@ def close_db(error):
     storage.close()
 
 
-@app.route('/2-hbnb/', strict_slashes=False)
+@app.route('/3-hbnb/', strict_slashes=False)
 def hbnb():
     """ HBNB is alive! """
     states = storage.all('State')
     amenities = storage.all('Amenity')
     places = storage.all('Place')
 
-    return render_template('2-hbnb.html',
+    return render_template('3-hbnb.html',
                            states=states,
                            amenities=amenities,
                            places=places,
