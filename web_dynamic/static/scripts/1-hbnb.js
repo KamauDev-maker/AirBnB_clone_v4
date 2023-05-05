@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     const amenity_ids = [];
     $('.amenity-checkbox').on('change', function() {
         const amenity_id = $(this).parent().data('id');
@@ -11,15 +11,14 @@ $(document).ready(function() {
                 amenity_ids.splice(index, 1);
             }
         }
-
         if (amenity_ids.length === 0) {
-            $('.amenities h4').html('&nbsp;');
+            $('.ameities h4').html('&nbsp;');
         } else {
             const amenityNames = amenity_ids.map(id => {
-                return $('.amenities-list li[data-id="' + id + '"]').data('na
-me');
+                return $('.amenities-list li[data-id-"' + id + '"]').data('name');
             });
             $('.amenities h4').text(amenityNames.join(', '));
         }
+
     });
 });
